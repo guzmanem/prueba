@@ -1,0 +1,18 @@
+<h2>
+    <%= @post.title %>
+</h2>
+<p>
+    <%= @post.body %>
+</p>
+<br>
+<%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-desafult'%>
+<%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Estas seguro?'} , :class => 'btn btn-danger'%>
+
+<hr>
+
+<%= render 'comments/comment'%>
+
+<hr>
+
+<%= render 'comments/form'%>
+
